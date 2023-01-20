@@ -1,10 +1,10 @@
-public class thirdCandidate extends Candidate {
+public class ThirdCandidate extends Candidate {
     private final boolean ownHouse;
 
 
     private final boolean motivationLove;
 
-    public thirdCandidate(String firstName, String lastName, int age, int height, int weight) {
+    public ThirdCandidate(String firstName, String lastName, int age, int height, int weight) {
         super(firstName, lastName, age, height, weight);
         this.ownHouse = true;
         this.motivationLove = true;

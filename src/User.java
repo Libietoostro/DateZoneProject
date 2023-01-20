@@ -50,7 +50,7 @@ public class User {
         int lowerAgeLimit = 18;
         int upperAgeLimit = 80;
         String nameAge = "age";
-        this.age = Range(nameAge, lowerAgeLimit, upperAgeLimit);
+        this.age = range(nameAge, lowerAgeLimit, upperAgeLimit);
         System.out.println("The age range you have selected is: " + age[0] + "-" + age[1] + "\n");
 
 
@@ -58,7 +58,7 @@ public class User {
         int lowerHeightLimit = 100;
         int upperHeightLimit = 260;
         String nameHeight = "height";
-        this.height = Range(nameHeight, lowerHeightLimit, upperHeightLimit);
+        this.height = range(nameHeight, lowerHeightLimit, upperHeightLimit);
         System.out.println("The height range you have selected is: " + this.height[0] + "-" + this.height[1] + "\n");
 
 
@@ -66,7 +66,7 @@ public class User {
         int lowerWeightLimit = 30;
         int upperWeightLimit = 500;
         String nameWeight = "weight";
-        this.weight = Range(nameWeight, lowerWeightLimit, upperWeightLimit);
+        this.weight = range(nameWeight, lowerWeightLimit, upperWeightLimit);
         System.out.println("The height range you have selected is: " + this.weight[0] + "-" + this.weight[1] + "\n");
 
 
@@ -299,7 +299,7 @@ public class User {
     }
 
 
-    public static int[] Range(String rangeName, int lowerLimit, int upperLimit) {
+    public static int[] range(String rangeName, int lowerLimit, int upperLimit) {
         int[] outputArray = new int[2];
 
 

@@ -1,9 +1,9 @@
-public class firstCandidate extends Candidate {
+public class FirstCandidate extends Candidate {
     private final boolean ownBusiness;
     private final boolean loveAnimals;
 
 
-    public firstCandidate(String firstName, String lastName, int age, int height, int weight) {
+    public FirstCandidate(String firstName, String lastName, int age, int height, int weight) {
         super(firstName, lastName, age, height, weight);
         this.ownBusiness = true;
         this.loveAnimals = true;

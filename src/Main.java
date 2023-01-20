@@ -14,12 +14,12 @@ public class Main {
         ArrayList<Candidate> listCandidates = new ArrayList<>();
         User user = new User();
 
-        firstCandidate firstCandidate = new firstCandidate("Jan", "Kowalski", 26, 190, 100);
-        secondCandidate secondCandidate = new secondCandidate("Piotr", "Nowak", 35, 180, 100);
-        thirdCandidate thirdCandidate = new thirdCandidate("Alan", "Kwiecinski", 45, 175, 90);
-        fourthCandidate fourthCandidate = new fourthCandidate("Joanna", "Kwiatek", 55, 170, 80);
-        fifthCandidate fifthCandidate = new fifthCandidate("Katarzyna", "Cichopek", 30, 170, 100);
-        sixthCandidate sixthCandidate = new sixthCandidate("Lena", "Pojasek", 40, 165, 70);
+        FirstCandidate firstCandidate = new FirstCandidate("Jan", "Kowalski", 26, 190, 100);
+        SecondCandidate secondCandidate = new SecondCandidate("Piotr", "Nowak", 35, 180, 100);
+        ThirdCandidate thirdCandidate = new ThirdCandidate("Alan", "Kwiecinski", 45, 175, 90);
+        FourthCandidate fourthCandidate = new FourthCandidate("Joanna", "Kwiatek", 55, 170, 80);
+        FifthCandidate fifthCandidate = new FifthCandidate("Katarzyna", "Cichopek", 30, 170, 100);
+        SixthCandidate sixthCandidate = new SixthCandidate("Lena", "Pojasek", 40, 165, 70);
 
         listCandidates.add(firstCandidate);
         listCandidates.add(secondCandidate);
