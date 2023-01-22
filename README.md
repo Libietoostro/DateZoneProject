@@ -28,7 +28,7 @@ The application enables the user to find the perfect candidate by matching his p
 
 # Creation Process
 
-Initially I have created class called Candidate and fields which describe the characteristic each candidate.
+Initially I have created class called **Candidate** and fields which describe the characteristic each candidate.                                            
 Please find below these fields:
 -	First name and last name,
 -	age,
@@ -141,9 +141,9 @@ public String genderCandidate() {
 ```
 Candidate characteristics will be compared with the preferences of the application user. For this reason, methods from the Scanner class and the switch statement are used there. The introduction of these methods will avoid unnecessary errors (typos).
 
-The two methods use a functions from the another "User" class because the user is also forced to specify a hobby and a preferred hair color. The similar functionality of these methods allows them to be used in this case. In this way we can avoid unnecessary code duplication.
+The two methods use a functions from the another **"User"** class because the user is also forced to specify a hobby and a preferred hair color. The similar functionality of these methods allows them to be used in this case. In this way we can avoid unnecessary code duplication.
 
-In the Candidate class there is also an override toString method, which was created to display an exact description for each of the candidates.
+In the **Candidate** class there is also an override **toString** method, which was created to display an exact description for each of the candidates.
 ```java
 @Override
     public String toString() {
@@ -155,12 +155,12 @@ In the Candidate class there is also an override toString method, which was crea
 
 The next step was to create six classes representing six candidates extended by the Candidate class.    
 Classes representing candidates:
--	FirstCandidate,
--	SecondCandidate,
--	ThirdCandidate,
--	FourthCandidate,
--	FifthCandidate,
--	SixthCandidate.
+-	**FirstCandidate**,
+-	**SecondCandidate**,
+-	**ThirdCandidate**,
+-	**FourthCandidate**,
+-	**FifthCandidate**,
+-	**SixthCandidate**.
 
 In each class, two additional fields assigned to a concrete candidate were created, as well as a constructor and getters related to the fields visible below.
 ```java 
@@ -185,7 +185,7 @@ public class FirstCandidate extends Candidate {
     }
 ```
 
-The toString method was overwritten again and supplemented with information directly related to the fields in a specific class describing a specific candidate in order to present its characteristics in more detail.
+The **toString** method was overwritten again and supplemented with information directly related to the fields in a specific class describing a specific candidate in order to present its characteristics in more detail.
 ```java
 @Override
     public String toString() {
@@ -208,7 +208,7 @@ The toString method was overwritten again and supplemented with information dire
     }
 ```
 
-The next stage was to create the User class and fields to assign preferences to the user. Getters was created for fields as well. 
+The next stage was to create the **User** class and fields to assign preferences to the user. Getters was created for fields as well. 
 ```java
 public class User {
     private final static Scanner scanner = new Scanner(System.in);
@@ -232,7 +232,7 @@ public class User {
     private String studentStatus;
 ```
 
-Methods orientation, range, hairColor, hobby and additionalPoints were used to determine user preferences.
+Methods **orientation**, **range**, **hairColor**, **hobby** and **additionalPoints** were used to determine user preferences.
 ```java 
 public static String orientation() {
         System.out.println("""
@@ -349,7 +349,7 @@ public static String orientation() {
     }
 ```
 
-Preferences were assigned to the fields of the User class by a survey method. The method survey allows us to get to know the user better.
+Preferences were assigned to the fields of the **User** class by a **survey** method. The method survey allows us to get to know the user better.
 ```java
    public void survey() {
         System.out.println("In order to find the best candidate for you, please answer a few questions below: ");
@@ -467,7 +467,7 @@ Preferences were assigned to the fields of the User class by a survey method. Th
     }
 ```
 
-In the User class, there is also an overwritten toString method from the Object class.
+In the **User** class, there is also an overwritten **toString** method from the **Object** class.
 ```java
 @Override
     public String toString() {
@@ -492,7 +492,8 @@ In the User class, there is also an overwritten toString method from the Object 
     }
 ```
 
-Validation methods in a separate Validation class were applied to methods such as range, hobby or orientation. These methods were created to protect against possible user error or exceeding the assumed ranges.
+Validation methods in a separate **Validation** class were applied to methods such as **range**, **hobby** or **orientation**.                         
+These methods were created to protect against possible user error or exceeding the assumed ranges.
 ```java
 public static int correctLowerBorder(int lowerBorder, int lowerLimit, int upperLimit) {
         while (lowerBorder < lowerLimit || lowerBorder > upperLimit) {
@@ -523,8 +524,8 @@ public static int correctUpperBorder(int upperBorder, int upperLimit, int lowerB
     }
 ```
 
-The most important methods in the Main class, which also contains the main method, include:   
-refillingCandidates (A method to complete data on candidates in terms of gender, hobbies and hair color).
+The most important methods in the **Main** class, which also contains the main method, include:   
+- **refillingCandidates** (A method to complete data on candidates in terms of gender, hobbies and hair color).
 ```java
 public static CandidatesList refillingCandidates(ArrayList<Candidate> candidatesList) {
         CandidatesList listCandidates = addingCandidates(candidatesList);
@@ -547,7 +548,7 @@ public static CandidatesList refillingCandidates(ArrayList<Candidate> candidates
     }
 ```
 
-presentationOfCandidates (A method of presenting all candidates).
+- **presentationOfCandidates** (A method of presenting all candidates).
 ```java
 public static CandidatesList presentationOfCandidates(ArrayList<Candidate> candidatesList) {
         CandidatesList listCandidates = refillingCandidates(candidatesList);
@@ -562,7 +563,7 @@ public static CandidatesList presentationOfCandidates(ArrayList<Candidate> candi
     }
 ```
 
-scoringSystem (A method that assigns points to each candidate based on matching user preferences with candidate characteristics).
+- **scoringSystem** (A method that assigns points to each candidate based on matching user preferences with candidate characteristics).
 ```java
 public static int scoringSystem(CandidatesList listCandidates, User user, int candidateNumber, ArrayList<Boolean> additionalInformation) {
         int[] ageRange = user.getAge();
@@ -604,7 +605,7 @@ public static int scoringSystem(CandidatesList listCandidates, User user, int ca
     }
 ```
 
-pointPresentation (A method that presents the number of points that were assigned to each candidate).
+- **pointPresentation** (A method that presents the number of points that were assigned to each candidate).
 ```java
 private static int[] pointsPresentation(ArrayList<Boolean> additionalInformation, User user, CandidatesList candidatesList) {
         int[] points = new int[6];
@@ -621,7 +622,7 @@ private static int[] pointsPresentation(ArrayList<Boolean> additionalInformation
     }
 ```
 
-winner (A method that determines the winner(s) based on points earned).
+- **winner** (A method that determines the winner(s) based on points earned).
 ```java
    private static void winner(int[] points, CandidatesList candidatesList) {
         int max = Integer.MIN_VALUE;
@@ -665,27 +666,27 @@ winner (A method that determines the winner(s) based on points earned).
 # Running application
 
 ## Prerequisite
-If you want to run the application, java version 19.01 or later is required.                                             
+If you want to run the application, **java version 19.01** or later is required.                                             
 Please find below link to a tutorial on how to properly install the above java version:                                                 
-https://www.youtube.com/watch?v=vFBW6nMcVlU                                                                   
+**https://www.youtube.com/watch?v=vFBW6nMcVlU**                                                                   
 To download, follow the link below:                                                                                                                                                                      
-https://www.oracle.com/java/technologies/javase/jdk19-archive-downloads.html                                                    
+**https://www.oracle.com/java/technologies/javase/jdk19-archive-downloads.html**                                                    
 
 ## Launch process
-Download a file named launcher.jar from the DateZoneProject repository located on GitHub.                                                
+Download a file named **launcher.jar** from the **DateZoneProject** repository located on GitHub.                                                
 
 ![thirdImage](https://user-images.githubusercontent.com/116492421/213838445-951ddd34-beec-4ca4-a54f-3efa83f1f0b4.PNG)
 
 Then save it to a specific location on your computer.                                            
 On my computer, the file is located in:                                                    
-C:\Users\Robert\IdeaProjects\DateZoneProject\src                                       
+**C:\Users\Robert\IdeaProjects\DateZoneProject\src**                                       
 
-Open the console by typing cmd at the command line.                                            
+Open the console by typing **cmd** at the command line.                                            
 
 ![image](https://user-images.githubusercontent.com/116492421/213838763-a28abb59-9ec9-4402-9801-344a4e5116b1.png)
 
 In the next step, type the following command in the console:                                                   
-java -jar launcher.jar                                                                   
+**java -jar launcher.jar**                                                                   
 After typing the command, the program should start in the console.                                              
 
 ![carbon](https://user-images.githubusercontent.com/116492421/213839258-2802c72c-d459-4c00-b920-3696805aa747.png)
@@ -694,28 +695,28 @@ After typing the command, the program should start in the console.
 
 ## Prerequisite                                                     
 If you want to develop the application necessary will be                                                
--	java version 19.01,
--	IntelliJ IDEA Community Edition 2022.1*.
+-	**java version 19.01**,
+-	**IntelliJ IDEA Community Edition 2022.1**.
 
 
 Please find below link to a tutorial on how to properly install the above IntelliJ IDEA version:                                              
-https://www.youtube.com/watch?v=S8cVBE4euus                                                          
+**https://www.youtube.com/watch?v=S8cVBE4euus**                                                          
 To download, follow the link below:                                                         
-https://www.jetbrains.com/idea/download/#section=windows                                                     
+**https://www.jetbrains.com/idea/download/#section=windows**                                                     
 
 ![thirdImage](https://user-images.githubusercontent.com/116492421/213839484-02317d47-3c3c-4e1c-aec6-fa9067d12a4c.PNG)
 
 
 ## Project Openning
 
-Download the zip folder from the DateZoneProject repository with the project files.                                                           
+Download the zip folder from the **DateZoneProject** repository with the project files.                                                           
 
 ![image](https://user-images.githubusercontent.com/116492421/213839520-4df8eea9-c05b-41ef-9598-f27baecc08c6.png)
 
 
 Then save and extract project files to a specific location on your computer.                                                       
 On my computer, the file is located in:                                                                        
-C:\NewProject                                                                                       
+**C:\NewProject**                                                                                       
 
 ![carbon](https://user-images.githubusercontent.com/116492421/213839561-8355aa13-bd94-4edc-8490-91b0c31a145f.png)
 
